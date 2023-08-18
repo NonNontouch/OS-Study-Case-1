@@ -1,0 +1,15 @@
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/Study Case 1.csproj.AssemblyReference.cache
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/Study Case 1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/Study Case 1.AssemblyInfoInputs.cache
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/Study Case 1.AssemblyInfo.cs
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/Study Case 1.csproj.CoreCompileInputs.cache
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/bin/Debug/net7.0/Study Case 1
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/bin/Debug/net7.0/Study Case 1.deps.json
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/bin/Debug/net7.0/Study Case 1.runtimeconfig.json
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/bin/Debug/net7.0/Study Case 1.dll
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/bin/Debug/net7.0/Study Case 1.pdb
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/Study Case 1.dll
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/refint/Study Case 1.dll
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/Study Case 1.pdb
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/Study Case 1.genruntimeconfig.cache
+/Users/nontouch/Library/CloudStorage/OneDrive-KMITL/Operating Systems/Study Case 1/obj/Debug/net7.0/ref/Study Case 1.dll

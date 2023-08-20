@@ -13,8 +13,8 @@ namespace Study_Case_1
     {
         static byte[] Data_Global = new byte[1_000_000_000];
         static long Sum_Global = 0;
-        
-
+        static long[] Threads_Sum = new long[100];
+        static Thread[] threads = new Thread[100];
         static int ReadData()
         {
             int returnData = 0;
@@ -37,36 +37,32 @@ namespace Study_Case_1
 
             return returnData;
         }
-        static void sum(int start, int stop)
+        static void sum(int start, int stop, int idx)
         {
+            long Sum_local = 0;
             for (int i = start; i < stop; i++)
             {
                 if (Data_Global[i] % 2 == 0)
                 {
-                    Sum_Global -= Data_Global[i];
+                    Sum_local -= Data_Global[i];
                 }
                 else if (Data_Global[i] % 3 == 0)
                 {
-                    Sum_Global += (Data_Global[i] * 2);
+                    Sum_local += (Data_Global[i] * 2);
                 }
                 else if (Data_Global[i] % 5 == 0)
                 {
-                    Sum_Global += (Data_Global[i] / 2);
+                    Sum_local += (Data_Global[i] / 2);
                 }
                 else if (Data_Global[i] % 7 == 0)
                 {
-                    Sum_Global += (Data_Global[i] / 3);
+                    Sum_local += (Data_Global[i] / 3);
                 }
                 Data_Global[i] = 0;
             }
+            Threads_Sum[idx] = Sum_local;
         }
-        static void Thread1()
-        {
-            sum(0, 500_000_000);
-        }
-        static void Thread2(){
-            sum(500_000_000,1_000_000_000);
-        }
+
         static void Main(string[] args)
         {
             Stopwatch sw = new Stopwatch();
@@ -87,16 +83,28 @@ namespace Study_Case_1
             /* Start */
             Console.Write("\n\nWorking...");
             sw.Start();
-            Thread chunk1 = new Thread(Thread1);
-            Thread chunk2 = new Thread(Thread2);
-            chunk1.Start();
-            chunk2.Start();
-            chunk1.Join();
-            chunk2.Join();
+            for (int i = 0; i < 10; i++)
+            {
+                int index = i;
+                int start = i * 100_000_000;
+                int stop = (i + 1) * 100_000_000;
+                threads[i] = new Thread(() => sum(start, stop, index));
+                threads[i].Start();
+
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                threads[i].Join();
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Sum_Global += Threads_Sum[i];
+            }
             sw.Stop();
             Console.WriteLine("Done.");
 
             /* Result */
+            //result should be 888701676
             Console.WriteLine("Summation result: {0}", Sum_Global);
             Console.WriteLine("Time used: " + sw.ElapsedMilliseconds.ToString() + "ms");
         }
